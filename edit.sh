@@ -1,0 +1,21 @@
+code --install-extension bbenoist.shell
+code --install-extension chrmarti.regex
+code --install-extension CraigMaslowski.erb
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension esbenp.prettier-vscode
+code --install-extension geeksharp.openssl-configuration-file
+code --install-extension Gruntfuggly.todo-tree
+code --install-extension hashicorp.terraform
+code --install-extension MashDuek.jbuilder-highlight        
+code --install-extension mosapride.zenkaku
+code --install-extension MS-CEINTL.vscode-language-pack-ja  
+code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
+code --install-extension ms-toolsai.jupyter
+code --install-extension ms-toolsai.jupyter-keymap
+code --install-extension ms-toolsai.jupyter-renderers       
+code --install-extension rangav.vscode-thunder-client       
+code --install-extension ryu1kn.partial-diff
+code --install-extension shd101wyy.markdown-preview-enhancedcode --install-extension TabNine.tabnine-vscode
+code --install-extension vayan.haml
+code --install-extension vscode-icons-team.vscode-icons 
