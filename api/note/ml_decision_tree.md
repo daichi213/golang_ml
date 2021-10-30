@@ -1,4 +1,4 @@
-# Decision Tree 内部設計
+# DecisionTree内部設計
 
 1. 引数の読み込み
 
