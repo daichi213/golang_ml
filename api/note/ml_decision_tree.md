@@ -17,9 +17,10 @@
 	- 取得した最小値と最大値の範囲からランダムで値を選択し、その値を閾値とする
 
 	```go
+	// max, minはfloat型とする（出ないとFloor関数でエラーになる）
 	intercept := math.rand.Float64()
 	// if max - min>1
-	threshold := math.rand.Int31n(math.Floor(max - min)) + min + intercept
+	threshold := math.Floor(max - min) + min + intercept
 	```
 
 	- 葉ノードを定義する
@@ -61,3 +62,22 @@ node[i-1][k//2]
 <!-- TODO vscode拡張機能の一括インストールについてメモ・記事？を書く -->
 
 <!-- TODO データにスポットをあてたフローチャートを作成する -->
+
+## データセット分類の流れ（整理用）
+
+- i = 0の時
+	- node[0][0]から分岐
+		- node[0][0]（root nodeを生成）
+		- node[0][0]の下にchild nodeを生成
+		- node[1][0]で閾値を元にデータセットの分類を行う
+		- node[1][1]ではnode[1][0]で分類されなかったデータセットを割り当てる
+- i = 1の時
+	- node[1][0]から分岐
+		- node[1][0]の下にchild nodeを生成（node[2][0], node[2][1]）
+		- node[2][0]で閾値を元にデータセットの分類を行う
+		- node[2][1]ではnode[2][0]で分類されなかったデータセットを割り当てる
+	- node[1][1]から分岐
+		- node[1][1]の下にchild nodeを生成（node[2][2], node[2][3]）
+		- node[2][2]で閾値を元にデータセットの分類を行う
+		- node[2][3]ではnode[2][2]で分類されなかったデータセットを割り当てる
+	2^n

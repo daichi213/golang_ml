@@ -66,15 +66,3 @@ services:
       MYSQL_PORT: 3306
     depends_on:
       - db
-  nginx:
-    build:
-      context: ./nginx/
-      dockerfile: Dockerfile
-    container_name: nginx
-    ports:
-      - 80:80
-      - 443:443
-    volumes:
-      - ./nginx/:/etc/nginx/conf.d/
-    depends_on:
-      - front
